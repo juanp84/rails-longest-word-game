@@ -1,0 +1,16 @@
+
+
+<% @sample.each do |letter| %>
+<div class="letters"><div class="letter"> <h1><%= letter %></h1></div></div>
+<% end %>
+
+<div>
+ <form action="score">
+  <label for="ask!">Input your word<br></label>
+  <input type="text" name="word">
+  <input type="submit" value="Your Word">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :sample, @sample %>
+  </form>
+</div>
+
